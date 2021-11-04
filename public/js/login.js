@@ -21,25 +21,6 @@ const loginForm = async (e) => {
     }
 };
 
-const signUpForm = async (event) => {
-    event.preventDefault();
-
-    let username = document.querySelector('#username-signup').value.trim();
-    let password = document.querySelector('#password-signup').value.trim();
-
-    if (username && password) {
-        let response = await fetch('/api/user/', {
-            method: 'POST',
-            body: JSON.stringify({ username, password }),
-            headers: { 'Content-Type': 'application/json' },
-        });
-    }
-};
-
-document
-    .querySelector('#signup-button')
-    .addEventListener('click', signUpForm);
-
 document
     .querySelector('#login-button')
     .addEventListener('click', loginForm);
