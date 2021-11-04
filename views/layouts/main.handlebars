@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Tech Blog</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    {{!-- <link rel="stylesheet" type="text/css" href="/css/style.css"> --}}
+</head>
+
+<body>
+    <header class='display-flex justify-space-between text-center p-2'>
+        <h1>
+            Welcome to the Tech Blog!
+        </h1>
+        <nav class="navbar navbar-expand-sm bg-light rounded-3">
+            <ul class='navbar-nav'>
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/dashboard" data-bs-toggle="tooltip" data-bs-placement="top" title="Click here to return to the home page.">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="/logout" data-bs-toggle="tooltip" data-bs-placement="top" title="Click here to log out.">Log out</a></li>
+                <li class="nav-item"><a class="nav-link" href="/login" data-bs-toggle="tooltip" data-bs-placement="top" title="Click here to navigate to login page.">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Render the sub layout -->
+        {{{ body }}}
+
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+    </div>
+
+    <!-- Render script for logged in users only -->
+
+</body>
+
+</html>
