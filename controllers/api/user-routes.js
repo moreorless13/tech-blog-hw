@@ -9,9 +9,9 @@ router.post('/', async (req, res) => {
         });
 
         req.session.save(() => {
-            req.session.user_id = newUser.id;
+            req.session.userId = newUser.id;
             req.session.username = newUser.username;
-            req.body.loggedIn = true;
+            req.session.loggedIn = true;
         });
         res.status(200).json(newUser);
     } catch (error) {
@@ -31,9 +31,9 @@ router.post("/login", async (req, res) => {
             return;
         }
 
-        const passCheck = user.checkPassword(req.body.password);
+        const validPass = user.checkPassword(req.body.password);
 
-        if (!passCheck) {
+        if (!validPass) {
             res
                 .status(400)
                 .json({ message: "Please check your password and try again" });
@@ -41,11 +41,11 @@ router.post("/login", async (req, res) => {
         }
 
         req.session.save(() => {
-            req.session.user_id = user.id;
+            req.session.useId = user.id;
             req.session.username = user.username;
             req.session.loggedIn = true;
 
-            res.json({ message: "User is logged in!" });
+            res.json({ user, message: "User is logged in!" });
         });
     } catch (err) {
         res.status(500).json(err);
