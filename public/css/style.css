@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+.footer a {
+  display: inline-block;
+  padding: 1em;
+  margin-bottom: .5em;
+  background-color: var(--dark);
+  color: var(--primary);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+}

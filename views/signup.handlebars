@@ -1,20 +1,20 @@
-<div class="card">
-    <div class="card-header">
+<div class="card border-dark position-absolute top-50 start-50 translate-middle col-2 mt-2">
+    <div class="card-header bg-primary text-white text-center">
         <h2 class="card-title text-center bg-primary text-white">Sign Up!</h2>
     </div>
     <div id="signup" role="tabpanel">
         <form id="signup-form" class="card-body">
-            <div>
+            <div class="mb-3">
                 <label for="username-input-signup">Username: </label>
-                <input type="text" id="username-input-signup" />
+                <input type="text" id="username-input-signup" class="bg-info" />
             </div>
-            <div>
+            <div class="mb-3">
                 <label for="password-input-signup">Password: </label>
-                <input type="password" id="password-input-signup" />
+                <input type="password" id="password-input-signup" class="bg-info" />
             </div>
-            <button type="submit" id="signup-btn" class="btn">Sign up! </button>
+            <button type="submit" id="signup-btn" class="mt-3 btn-primary position-relative bottom-0 start-50 translate-middle">Sign up! </button>
             <br />
-            <a type="button" href="/login">Log In Here!</a>
+            <a type="button" href="/login" class="mt-2 ms-5">Log In Here!</a>
         </form>
     </div>
 </div>
