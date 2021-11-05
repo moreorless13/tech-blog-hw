@@ -5,7 +5,6 @@ const withAuth = require('../utils/withAuth');
 
 
 router.get('/', withAuth, async (req, res) => {
-    console.log('Hitting the dashboard routes')
     try {
         // Find the logged in user based on the session ID
         const postData = await Post.findAll({

@@ -12,15 +12,17 @@
 </head>
 
 <body class="flex-column min-100-vh">
-    <nav class="navbar">
-        <ul class="flex-row">
-            <li class="li-inline nav-item"><a class="nav-link" href="/">Home</a></li>
-            <li class="li-inline nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
-            <li class="li-inline nav-item"><a class="nav-link" href="#" id="logout-link">Logout</a></li>
-        </ul>
-    </nav>
-    <header class="hero">
-        <h1 class="app-title"><a href="/dashboard">Your Dashboard</a></h1>
+    <header class='display-flex justify-space-between text-center text-white bg-primary p-2'>
+        <h1>
+            Your Dashboard
+        </h1>
+        <nav class="navbar navbar-expand-sm bg-light rounded-3">
+            <ul class='navbar-nav'>
+                <li class="li-inline nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="li-inline nav-item"><a class="nav-link" href="/dashboard" data-bs-toggle="tooltip" data-bs-placement="top" title="Click here to return to the home page.">Dashboard</a></li>
+                <li class="li-inline nav-item"><a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Click here to log out." id="logout-link">Logout</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main class="col-auto">
