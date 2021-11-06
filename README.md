@@ -32,11 +32,11 @@ Signup Page:
 ![alt text](https://github.com/moreorless13/tech-blog-hw/blob/main/assets/Screenshot%202021-11-06%20143222.png)
 
 Dashboard: 
-
+![alt text](https://github.com/moreorless13/tech-blog-hw/blob/main/assets/Screenshot%202021-11-06%20143307.png)
 New Post:
-
+![alt text](https://github.com/moreorless13/tech-blog-hw/blob/main/assets/Screenshot%202021-11-06%20143318.png)
 Homepage with a post:
-
+![alt text](https://github.com/moreorless13/tech-blog-hw/blob/main/assets/Screenshot%202021-11-06%20143450.png)
 
 ```
 
