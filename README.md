@@ -21,7 +21,19 @@ npm i
 ```
 npm start
 ```
+Homepage: 
 ![alt text](https://github.com/moreorless13/tech-blog-hw/blob/main/assets/Screenshot%202021-11-06%20141718.png)
+
+Login Page:
+
+
+Dashboard: 
+
+New Post:
+
+Homepage with a post:
+
+
 ```
 
 
