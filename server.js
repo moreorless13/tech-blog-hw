@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3001;
 
 // import sequelize and session storage
 
-const sequelize = require('./config/config');
+const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // configure session
