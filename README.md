@@ -25,7 +25,7 @@ Homepage:
 ![alt text](https://github.com/moreorless13/tech-blog-hw/blob/main/assets/Screenshot%202021-11-06%20141718.png)
 
 Login Page:
-
+![alt text](https://github.com/moreorless13/tech-blog-hw/blob/main/assets/Screenshot%202021-11-06%20142700.png)
 
 Dashboard: 
 
