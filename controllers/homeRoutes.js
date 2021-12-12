@@ -1,19 +1,40 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../models/');
+const withAuth = require('../utils/withAuth')
 
-router.get('/', async (req, res) => {
+// router.get('/', async (req, res) => {
+//     try {
+//         const postData = await Post.findAll({
+//             include: [User],
+//         });
+
+//         const posts = postData.map((post) => post.get({ plain: true }));
+//         res.render('all-posts', { posts })
+//     } catch (error) {
+//         res.status(500).json(error)
+//     }
+
+// })
+
+router.get('/', withAuth, async (req, res) => {
     try {
+        // Find the logged in user based on the session ID
         const postData = await Post.findAll({
-            include: [User],
+            where: {
+                userId: req.session.userId,
+            },
         });
 
         const posts = postData.map((post) => post.get({ plain: true }));
-        res.render('all-posts', { posts })
-    } catch (error) {
-        res.status(500).json(error)
-    }
 
-})
+        res.render('all-posts-admin', {
+            layout: 'dashboard',
+            posts,
+        });
+    } catch (err) {
+        res.redirect('login');
+    }
+});
 
 router.get('/post/:id', async (req, res) => {
   try {
