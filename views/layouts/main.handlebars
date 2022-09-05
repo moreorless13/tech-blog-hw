@@ -21,8 +21,11 @@
             <ul class='navbar-nav'>
                 <li class="li-inline nav-item"><a class="nav-link" href="/">Home</a></li>
                 <li class="li-inline nav-item"><a class="nav-link" href="/dashboard" data-bs-toggle="tooltip" data-bs-placement="top" title="Click here to return to the home page.">Dashboard</a></li>
-                <li class="li-inline nav-item"><a class="nav-link" href="/login" data-bs-toggle="tooltip" data-bs-placement="top" title="Click here to navigate to login page.">Login</a></li>
+                {{#if loggedIn}}
                 <li class="li-inline nav-item"><a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Click here to log out." id="logout-link">Logout</a></li>
+                {{else}}        
+                <li class="li-inline nav-item"><a class="nav-link" href="/login" data-bs-toggle="tooltip" data-bs-placement="top" title="Click here to navigate to login page.">Login</a></li>
+                {{/if}}
             </ul>
         </nav>
     </header>
@@ -30,18 +33,15 @@
     <main>
         <!-- Render the sub layout -->
         {{{ body }}}
-
-        </section>
     </main>
 
     <footer>
 
     </footer>
     </div>
-
-    
-    
+    {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>
-<script src="/js/logout.js"></script>

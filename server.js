@@ -16,7 +16,13 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
     secret: 'Secrets secrets are no fun, unless they are shared by everyone',
-    cookie: {},
+    cookie: {
+        maxAge: 1000 * 60 * 60,
+        httpOnly: true,
+        secure: false,
+        sameSite: 'strict'
+
+    },
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({
@@ -36,7 +42,7 @@ app.set('view engine', 'handlebars');
 
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // tell express where routing exists

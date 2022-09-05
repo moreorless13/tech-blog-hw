@@ -3,12 +3,16 @@ const { User, Post, Comment } = require('../models/');
 
 router.get('/', async (req, res) => {
     try {
+      console.log(req.session)
         const postData = await Post.findAll({
             include: [User],
         });
-
         const posts = postData.map((post) => post.get({ plain: true }));
-        res.render('all-posts', { posts })
+        res.render('all-posts', { 
+          layout: 'main',
+          posts,
+          loggedIn: req.session.loggedIn 
+        })
     } catch (error) {
         res.status(500).json(error)
     }
@@ -30,7 +34,11 @@ router.get('/post/:id', async (req, res) => {
     if (postData) {
       const post = postData.get({ plain: true });
 
-      res.render('single-post', { post });
+      res.render('single-post', { 
+        layout: 'main',
+        post,
+        loggedIn: req.session.loggedIn
+      });
     } else {
       res.status(404).end();
     }
@@ -41,7 +49,7 @@ router.get('/post/:id', async (req, res) => {
 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
-        res.redirect('/');
+        res.redirect('/dashboard');
         return;
     }
 
